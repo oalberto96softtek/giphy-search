@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh  'bash post-deploy.sh'
+                sh  'bash post-deploy.sh $BUILD_ID'
             }
         }
     }
