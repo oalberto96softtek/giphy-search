@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh './post-deploy.sh'
+                sh 'post-deploy.sh'
             }
         }
     }
