@@ -21,7 +21,8 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                sh './post-deploy.sh'
+                sh 'echo $WORKSPACE'
+                sh -x $WORKSPACE/post-deploy.sh
             }
         }
     }
